@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- TODO: замените https://example.ru на боевой домен перед публикацией. -->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <url>
+        <loc>https://example.ru/</loc>
+        <priority>1.0</priority>
+    </url>
+    <url>
+        <loc>https://example.ru/docs/privacy-policy.html</loc>
+        <priority>0.3</priority>
+    </url>
+    <url>
+        <loc>https://example.ru/docs/personal-data-consent.html</loc>
+        <priority>0.3</priority>
+    </url>
+</urlset>

@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+Disallow: /submit.php
+Disallow: /config.php
+Disallow: /storage/
+
+Sitemap: https://example.ru/sitemap.xml

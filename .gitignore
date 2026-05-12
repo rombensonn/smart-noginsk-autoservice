@@ -1,0 +1,4 @@
+storage/rate-limit.json
+.DS_Store
+Thumbs.db
+*.log
