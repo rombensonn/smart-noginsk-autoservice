@@ -488,10 +488,16 @@ function render_form(string $idPrefix, array $serviceOptions, string $csrfToken,
                 </div>
 
                 <div class="rating-panel reveal" aria-label="Показатели доверия">
-                    <strong>5,0</strong><span>рейтинг</span>
-                    <strong>340</strong><span>оценок</span>
-                    <strong>176</strong><span>отзывов</span>
-                    <strong>2026</strong><span>Хорошее место</span>
+                    <div class="rating-panel__score">
+                        <span>5,0</span>
+                        <small>рейтинг</small>
+                    </div>
+                    <div class="rating-panel__metrics">
+                        <span><b>340</b><small>оценок</small></span>
+                        <span><b>176</b><small>отзывов</small></span>
+                        <span><b>2026</b><small>Хорошее место</small></span>
+                    </div>
+                    <p>по данным карточки на Яндекс Картах</p>
                 </div>
 
                 <div class="review-cards">
@@ -551,19 +557,42 @@ function render_form(string $idPrefix, array $serviceOptions, string $csrfToken,
         </section>
 
         <section class="section final-cta section-dark" id="final-form">
-            <div class="container final-grid">
-                <div class="reveal">
+            <div class="container final-grid final-grid--intake">
+                <div class="final-intake reveal">
                     <span class="eyebrow">Предварительная запись</span>
                     <h2>Опишите проблему — подскажем, с чего начать</h2>
-                    <p>Если проблема не очевидна, не нужно гадать по форумам и менять детали наугад. Оставьте заявку, мастер уточнит симптомы и предложит следующий шаг.</p>
-                    <ul class="check-list">
-                        <li><?= svg_icon('check') ?> диагностика и объяснение причины</li>
-                        <li><?= svg_icon('check') ?> согласование работ до ремонта</li>
-                        <li><?= svg_icon('check') ?> подбор запчастей под автомобиль</li>
-                    </ul>
+                    <p>Если причина не очевидна, начните с заявки. Мы уточним симптомы, марку автомобиля и подскажем ближайший спокойный шаг: диагностика, ТО, электрика, запчасти или запись на ремонт.</p>
+
+                    <div class="intake-board" aria-label="Что происходит после заявки">
+                        <article>
+                            <span>01</span>
+                            <h3>Уточняем симптомы</h3>
+                            <p>Без решения по телефону наугад.</p>
+                        </article>
+                        <article>
+                            <span>02</span>
+                            <h3>Подбираем маршрут</h3>
+                            <p>Диагностика, ТО, электрика или запчасти.</p>
+                        </article>
+                        <article>
+                            <span>03</span>
+                            <h3>Согласуем время</h3>
+                            <p>Предварительная запись без лишней суеты.</p>
+                        </article>
+                    </div>
+
+                    <div class="final-service-strip" aria-label="Что можно указать в заявке">
+                        <span>симптомы</span>
+                        <span>марка и модель</span>
+                        <span>удобное время</span>
+                    </div>
                 </div>
 
-                <div class="reveal">
+                <div class="final-form-shell reveal">
+                    <div class="final-form-shell__note">
+                        <span><?= svg_icon('shield') ?></span>
+                        <p>Заявка не обязывает к ремонту. Сначала уточним проблему и удобное время.</p>
+                    </div>
                     <?php render_form('final', $serviceOptions, (string) $_SESSION['csrf_token'], $canonical, true, 'Заявка на запись'); ?>
                 </div>
             </div>
