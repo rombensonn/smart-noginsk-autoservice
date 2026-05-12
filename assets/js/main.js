@@ -268,6 +268,9 @@
     });
 
     const revealItems = [...doc.querySelectorAll('.reveal')];
+    revealItems.forEach((item, index) => {
+        item.style.setProperty('--reveal-delay', `${Math.min(index * 35, 280)}ms`);
+    });
     if ('IntersectionObserver' in window) {
         const observer = new IntersectionObserver((entries) => {
             entries.forEach((entry) => {
